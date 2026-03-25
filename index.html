@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>每日AI早报</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 30px;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+
+        .header p {
+            opacity: 0.9;
+            font-size: 1rem;
+        }
+
+        .latest-news {
+            padding: 30px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .latest-news h2 {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .date-badge {
+            background: #667eea;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: normal;
+        }
+
+        .audio-player {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .play-button {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #667eea;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .play-button:hover {
+            background: #5568d3;
+            transform: scale(1.05);
+        }
+
+        .play-button.playing {
+            background: #e74c3c;
+        }
+
+        .play-icon {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 8px 0 8px 14px;
+            border-color: transparent transparent transparent white;
+            margin-left: 4px;
+        }
+
+        .pause-icon {
+            display: none;
+            width: 14px;
+            height: 14px;
+            background: white;
+        }
+
+        .play-button.playing .play-icon {
+            display: none;
+        }
+
+        .play-button.playing .pause-icon {
+            display: block;
+        }
+
+        .audio-info {
+            flex: 1;
+        }
+
+        .audio-title {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 4px;
+        }
+
+        .audio-duration {
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        .progress-bar {
+            flex: 1;
+            height: 4px;
+            background: #ddd;
+            border-radius: 2px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .progress {
+            height: 100%;
+            background: #667eea;
+            width: 0%;
+            transition: width 0.1s linear;
+        }
+
+        .news-content {
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .news-content h3 {
+            color: #2c3e50;
+            margin: 20px 0 10px;
+            font-size: 1.25rem;
+        }
+
+        .news-content h4 {
+            color: #34495e;
+            margin: 16px 0 8px;
+            font-size: 1.1rem;
+        }
+
+        .news-content p {
+            margin-bottom: 10px;
+        }
+
+        .news-content ul {
+            margin: 10px 0 10px 25px;
+        }
+
+        .news-content li {
+            margin-bottom: 6px;
+        }
+
+        .archive-section {
+            padding: 30px;
+        }
+
+        .archive-section h2 {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .archive-list {
+            list-style: none;
+        }
+
+        .archive-list li {
+            padding: 12px 16px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .archive-list li:hover {
+            border-color: #667eea;
+            background: #f8f9ff;
+        }
+
+        .archive-list a {
+            text-decoration: none;
+            color: #2c3e50;
+            display: block;
+            font-weight: 500;
+        }
+
+        .archive-date {
+            color: #999;
+            font-size: 0.85rem;
+            margin-top: 2px;
+        }
+
+        footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            color: #999;
+            font-size: 0.9rem;
+            border-top: 1px solid #eee;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .header h1 {
+                font-size: 1.5rem;
+            }
+            .latest-news, .archive-section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📰 每日AI早报</h1>
+            <p>每天早晨为你播报最新AI领域科技新闻</p>
+        </div>
+
+        <div class="latest-news" id="latest-news">
+            <!-- 最新日报会通过JavaScript动态加载 -->
+            <div id="loading">加载中...</div>
+        </div>
+
+        <div class="archive-section">
+            <h2>📜 历史归档</h2>
+            <ul class="archive-list" id="archive-list">
+                <!-- 归档列表会动态生成 -->
+            </ul>
+        </div>
+
+        <footer>
+            由 ArkClaw 自动生成 • 每天更新
+        </footer>
+    </div>
+
+    <script>
+        // 新闻数据 - 每次更新会自动追加
+        const newsArchive = [
+            {
+                date: "2026-03-25",
+                title: "2026年3月25日 星期三",
+                filename: "news-2026-03-25.html",
+                audio: "audio/news-2026-03-25.mp3"
+            }
+        ];
+
+        // 当前最新新闻
+        const latest = newsArchive[0];
+
+        // 加载最新新闻内容
+        async function loadLatestNews() {
+            try {
+                const response = await fetch(latest.filename);
+                const html = await response.text();
+                document.getElementById('latest-news').innerHTML = `
+                    <h2>今日早报 <span class="date-badge">${latest.title}</span></h2>
+                    <div class="audio-player">
+                        <button class="play-button" id="playButton">
+                            <div class="play-icon"></div>
+                            <div class="pause-icon"></div>
+                        </button>
+                        <div class="audio-info">
+                            <div class="audio-title">语音播报</div>
+                            <div class="audio-duration" id="audioDuration">点击播放</div>
+                        </div>
+                        <div class="progress-bar" id="progressBar">
+                            <div class="progress" id="progress"></div>
+                        </div>
+                        <audio id="audioPlayer" src="${latest.audio}"></audio>
+                    </div>
+                    <div class="news-content">
+                        ${html}
+                    </div>
+                `;
+                setupAudioPlayer();
+                renderArchive();
+            } catch (e) {
+                document.getElementById('latest-news').innerHTML = `
+                    <h2>今日早报 <span class="date-badge">${latest.title}</span></h2>
+                    <div class="audio-player">
+                        <button class="play-button" id="playButton">
+                            <div class="play-icon"></div>
+                            <div class="pause-icon"></div>
+                        </button>
+                        <div class="audio-info">
+                            <div class="audio-title">语音播报</div>
+                            <div class="audio-duration" id="audioDuration">点击播放</div>
+                        </div>
+                        <div class="progress-bar" id="progressBar">
+                            <div class="progress" id="progress"></div>
+                        </div>
+                        <audio id="audioPlayer" src="${latest.audio}"></audio>
+                    </div>
+                    <div class="news-content">
+${`
+# 📰 每日AI新闻早报
+
+**日期**: 2026年3月25日  
+
+---
+
+## 🔥 重大发布
+
+### Anthropic 的 Claude 现在可以控制你的 Mac
+
+Anthropic 推出了目前最雄心勃勃的消费级AI代理功能，让 Claude 可以直接控制用户的 Mac 电脑。
+
+- Claude 现在能自主点击按钮、打开应用、输入文字、操作软件
+- 付费订阅用户可立即体验研究预览版
+- 同时集成到 Claude Cowork 生产力工具和 Claude Code 开发者工具
+- 支持从手机分配任务，实现端到端自主工作
+
+这标志着AI代理从对话阶段进入到真正能自主完成工作的新阶段。
+
+---
+
+### Cloudflare 推出 Dynamic Workers：AI代理代码执行快100倍
+
+Cloudflare 推出全新轻量级沙箱系统，抛弃传统容器：
+
+- 毫秒级启动，仅占用几MB内存
+- 比传统容器快100倍，内存效率高10-100倍
+- 定价仅每Worker每日$0.002
+- 显著降低大规模部署成本
+
+---
+
+## 🌍 政策法律
+
+### Anthropic 与五角大楼对簿公堂
+
+- Anthropic 挑战美国国防部将其列为军事供应链风险的决定
+- 法庭辩论已完成，法官将在未来几天作出裁决
+- 这是对AI供应链限制的首次重大法律挑战
+
+---
+
+## 💰 行业动态
+
+- **OpenAI** 即将关闭其视频生成项目，尽管此前曾与迪士尼达成巨额合作
+- **Beehiiv** 推出AI聊天机器人原生集成，支持ChatGPT和Claude直接处理通讯内容
+
+---
+
+## 🎯 今日要点
+
+1. AI代理正迈向真正的自主计算机操作，Claude控制Mac是里程碑
+2. AI基础设施快速演进，Cloudflare方案解决大规模部署性能成本问题
+3. AI监管法律战升温，将深刻影响行业格局
+`}
+                    </div>
+                `;
+                setupAudioPlayer();
+                renderArchive();
+            }
+        }
+
+        // 渲染归档列表
+        function renderArchive() {
+            const list = document.getElementById('archive-list');
+            list.innerHTML = newsArchive.map(item => `
+                <li>
+                    <a href="${item.filename}" target="_blank">
+                        📰 ${item.title}
+                        <div class="archive-date">${item.audio ? '🔊 有语音播报' : '📄 仅文字'}</div>
+                    </a>
+                </li>
+            `).join('');
+        }
+
+        // 设置音频播放器
+        function setupAudioPlayer() {
+            const audio = document.getElementById('audioPlayer');
+            const playButton = document.getElementById('playButton');
+            const progress = document.getElementById('progress');
+            const progressBar = document.getElementById('progressBar');
+            const durationDisplay = document.getElementById('audioDuration');
+
+            audio.addEventListener('loadedmetadata', () => {
+                const duration = audio.duration;
+                const minutes = Math.floor(duration / 60);
+                const seconds = Math.floor(duration % 60);
+                durationDisplay.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+            });
+
+            playButton.addEventListener('click', () => {
+                if (audio.paused) {
+                    audio.play();
+                    playButton.classList.add('playing');
+                } else {
+                    audio.pause();
+                    playButton.classList.remove('playing');
+                }
+            });
+
+            audio.addEventListener('timeupdate', () => {
+                const percent = (audio.currentTime / audio.duration) * 100;
+                progress.style.width = percent + '%';
+            });
+
+            progressBar.addEventListener('click', (e) => {
+                const rect = progressBar.getBoundingClientRect();
+                const percent = (e.clientX - rect.left) / rect.width;
+                audio.currentTime = percent * audio.duration;
+            });
+
+            audio.addEventListener('ended', () => {
+                playButton.classList.remove('playing');
+                progress.style.width = '0%';
+            });
+        }
+
+        // 页面加载完成后加载新闻
+        document.addEventListener('DOMContentLoaded', loadLatestNews);
+    </script>
+</body>
+</html>
