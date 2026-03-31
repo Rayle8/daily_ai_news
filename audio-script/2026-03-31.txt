@@ -2,8 +2,23 @@
 
 > 这是每日为你整理的AI领域最新动态，包含重大发布、研究进展、产业动态和政策资讯。
 
+重大发布
+
+Exclusive: Runway launches $10M fund, Builders program to support early stage AI startups
+
+融资创投
+
+Nomadic raises $8.4 million to wrangle the data pouring off autonomous vehicles
+ScaleOps raises $130M to improve computing efficiency amid AI demand
+AI chip startup Rebellions raises $400 million at $2.3B valuation in pre-IPO round
+Mistral AI raises $830M in debt to set up a data center near Paris
+
 产业商业
 
-暂无产业商业信息。
+With its new app store, Ring bets on AI to go beyond home security
+15% of Americans say they&#8217;d be willing to work for an AI boss, according to new poll
+Popular AI gateway startup LiteLLM ditches controversial startup Delve
+As more Americans adopt AI tools, fewer say they can trust the results
+Mantis Biotech is making &#8216;digital twins&#8217; of humans to help solve medicine&#8217;s data availability problem
 
-生成时间：2026-03-31T13:00:39.275Z
+生成时间：2026-03-31T15:00:49.947Z
