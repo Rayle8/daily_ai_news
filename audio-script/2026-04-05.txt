@@ -1,0 +1,20 @@
+今日AI早报 2026年4月5日 星期日
+
+> 这是每日为你整理的AI领域最新动态，包含重大发布、研究进展、产业动态和政策资讯。
+
+融资创投
+
+OpenAI, not yet public, raises $3B from retail investors in monster $122B fund raise
+
+产业商业
+
+OpenAI executive shuffle includes new role for COO Brad Lightcap to lead &#8216;special projects&#8217;
+AI companies are building huge natural gas plants to power data centers. What could go wrong?
+The Facebook insider building content moderation for the AI era
+OpenAI acquires TBPN, the buzzy founder-led business talk show
+Microsoft takes on AI rivals with three new foundational models
+Cognichip wants AI to design the chips that power AI, and just raised $60M to try
+Salesforce announces an AI-heavy makeover for Slack, with 30 new features
+Yupp shuts down after raising $33M from a16z crypto&#8217;s Chris Dixon
+
+生成时间：2026-04-04T21:01:11.334Z
