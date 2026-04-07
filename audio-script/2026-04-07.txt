@@ -2,8 +2,23 @@
 
 > 这是每日为你整理的AI领域最新动态，包含重大发布、研究进展、产业动态和政策资讯。
 
+重大发布
+
+Google quietly launched an AI dictation app that works offline
+
+融资创投
+
+Spain&#8217;s Xoople raises $130 million Series B to map the Earth for AI
+
 产业商业
 
-暂无产业商业信息。
+AI startup Rocket offers vibe McKinsey-style reports at a fraction of the cost
+OpenAI alums have been quietly investing from a new, potentially $100M fund
+Iran threatens &#8216;Stargate&#8217; AI data centers
+OpenAI’s vision for the AI economy: public wealth funds, robot taxes, and a four-day workweek
+How to use the new ChatGPT app integrations, including DoorDash, Spotify, Uber, and others
+Copilot is ‘for entertainment purposes only,’ according to Microsoft’s terms of use
+OpenAI executive shuffle includes new role for COO Brad Lightcap to lead &#8216;special projects&#8217;
+AI companies are building huge natural gas plants to power data centers. What could go wrong?
 
-生成时间：2026-04-07T05:06:55.264Z
+生成时间：2026-04-07T11:02:14.517Z
