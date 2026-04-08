@@ -1,0 +1,24 @@
+今日AI早报 2026年4月8日 星期三
+
+> 这是每日为你整理的AI领域最新动态，包含重大发布、研究进展、产业动态和政策资讯。
+
+重大发布
+
+Google quietly launched an AI dictation app that works offline
+
+融资创投
+
+Firmus, the &#8216;Southgate&#8217; AI data center builder backed by Nvidia, hits $5.5B valuation
+
+产业商业
+
+I can&#8217;t help rooting for tiny open source AI model maker Arcee
+Anthropic debuts preview of powerful new AI model Mythos in new cybersecurity initiative
+Uber is the latest to be won over by Amazon&#8217;s AI chips
+Google Maps can now write captions for your photos using AI
+The AI gold rush is pulling private wealth into riskier, earlier bets
+AI startup Rocket offers vibe McKinsey-style reports at a fraction of the cost
+OpenAI alums have been quietly investing from a new, potentially $100M fund
+Iran threatens &#8216;Stargate&#8217; AI data centers
+
+生成时间：2026-04-08T01:04:45.428Z
