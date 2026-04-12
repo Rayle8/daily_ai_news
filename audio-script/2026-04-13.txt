@@ -1,0 +1,21 @@
+今日AI早报 2026年4月13日 星期一
+
+> 这是每日为你整理的AI领域最新动态，包含重大发布、研究进展、产业动态和政策资讯。
+
+重大发布
+
+Meta AI app climbs to No. 5 on the App Store after Muse Spark launch
+Tubi is the first streamer to launch a native app within ChatGPT
+
+产业商业
+
+From LLMs to hallucinations, here&#8217;s a simple guide to common AI terms
+Stalking victim sues OpenAI, claims ChatGPT fueled her abuser&#8217;s delusions and ignored her warnings
+ChatGPT finally offers $100/month Pro plan
+Florida AG announces investigation into OpenAI over shooting that allegedly involved ChatGPT
+Google and Intel deepen AI infrastructure partnership
+Amazon CEO takes aim at Nvidia, Intel, Starlink, more in annual shareholder letter
+Poke makes using AI agents as easy as sending a text
+AWS boss explains why investing billions in both Anthropic and OpenAI is an OK conflict
+
+生成时间：2026-04-12T21:01:46.184Z
