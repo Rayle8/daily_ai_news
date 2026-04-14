@@ -1,0 +1,17 @@
+今日AI早报 2026年4月15日 星期三
+
+> 这是每日为你整理的AI领域最新动态，包含重大发布、研究进展、产业动态和政策资讯。
+
+产业商业
+
+Max Hodak’s Science Corp. is preparing to place its first sensor in a human brain
+Google adds AI Skills to Chrome to help you save favorite workflows
+Google brings its Gemini Personal Intelligence feature to India
+OpenAI has bought AI personal finance startup Hiro
+Stanford report highlights growing disconnect between AI insiders and everyone else
+Vercel CEO Guillermo Rauch signals IPO readiness as AI agents fuel revenue surge
+Trump officials may be encouraging banks to test Anthropic’s Mythos model
+From LLMs to hallucinations, here&#8217;s a simple guide to common AI terms
+Stalking victim sues OpenAI, claims ChatGPT fueled her abuser&#8217;s delusions and ignored her warnings
+
+生成时间：2026-04-14T21:03:53.312Z
