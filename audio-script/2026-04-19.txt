@@ -1,0 +1,24 @@
+今日AI早报 2026年4月19日 星期日
+
+> 这是每日为你整理的AI领域最新动态，包含重大发布、研究进展、产业动态和政策资讯。
+
+重大发布
+
+Luma launches AI-powered production studio with faith-focused Wonder Project
+
+融资创投
+
+Sources: Cursor in talks to raise $2B+ at $50B valuation as enterprise growth surges
+Factory hits $1.5B valuation to build AI coding for enterprises
+Upscale AI in talks to raise at $2B valuation, says report
+
+产业商业
+
+AI chip startup Cerebras files for IPO
+The App Store is booming again, and AI may be why
+Kevin Weil and Bill Peebles exit OpenAI as company continues to shed &#8216;side quests&#8217;
+Tokenmaxxing, OpenAI&#8217;s shopping spree, and the AI Anxiety Gap
+Physical Intelligence, a hot robotics startup, says its new robot brain can figure out tasks it was never taught
+OpenAI takes aim at Anthropic with beefed-up Codex that gives it more power over your desktop
+
+生成时间：2026-04-19T01:05:39.250Z
