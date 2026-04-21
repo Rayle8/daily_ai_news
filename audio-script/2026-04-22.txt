@@ -1,0 +1,24 @@
+今日AI早报 2026年4月22日 星期三
+
+> 这是每日为你整理的AI领域最新动态，包含重大发布、研究进展、产业动态和政策资讯。
+
+重大发布
+
+AI Dungeon maker Latitude unveils Voyage, a platform for creating AI-powered RPGs
+
+融资创投
+
+Clarifai deletes 3 million photos that OkCupid provided to train facial recognition AI, report says
+
+产业商业
+
+ChatGPT&#8217;s new Images 2.0 model is surprisingly good at generating text
+Sam Altman throws shade at Anthropic&#8217;s cyber model, Mythos: &#8216;fear-based marketing&#8217;
+Bond, a new social media platform, wants to use AI to help you kick your doomscrolling habit
+YouTube expands its AI likeness detection technology to celebrities
+GRAI believes AI can make music more social, not replace artists
+CEO and CFO suddenly depart AI nuclear power upstart Fermi
+OpenAI’s existential questions
+AI chip startup Cerebras files for IPO
+
+生成时间：2026-04-21T19:01:10.018Z
